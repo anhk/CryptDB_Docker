@@ -2,6 +2,10 @@ FROM debian:wheezy
 
 MAINTAINER Eirik Klevstad
 
+RUN echo "\
+deb http://archive.debian.org/debian wheezy main\n\
+" > /etc/apt/sources.list
+
 # make sure the package repository is up to date
 RUN apt-get update
 
